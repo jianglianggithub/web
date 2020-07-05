@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    /*div>span {*/
+    /*    color: saddlebrown;*/
+    /*}*/
+
+
+    /*span[teaaa |= 'aa-1'] {*/
+
+    /*    color: aqua;*/
+    /*    width: 200px;*/
+    /*    height: 100px;*/
+    /*    background-color: blue;*/
+    /*}*/
+
+    /*#a a:link {*/
+    /*    color: sienna;*/
+    /*}*/
+    /*#a a:visited	 {*/
+    /*    color: mediumaquamarine;*/
+    /*}*/
+    /*#b>input:focus{*/
+    /*    border-color: mediumaquamarine;*/
+    /*    width: 200px;*/
+    /*}*/
+
+    /*p:first-letter {*/
+    /*    color: mediumaquamarine;*/
+    /*}*/
+    /*p:first-line {*/
+    /*    color: sienna;*/
+    /*}*/
+
+
+    #d div span:first-child {
+        color: sienna;
+    }
+    #d div span:before {
+        content: "asdasdasd";
+    }
+
+    #e div[a ^= "asd"] {
+        color: sienna;
+    }
+    #f div:nth-child(2) {
+        color: sienna;
+    }
+
+    #g span:nth-of-type(2) {
+        color: sienna;
+    }
+</style>
+<body>
+
+        <div>
+            <p>
+                <span>a</span>
+                <span>a</span>
+                <span>a</span>
+            </p>
+        </div>
+        <!-- 使用 |= 选择器 必须 xxx 后面跟得是 - xx才行。。佛了  -->
+        <span teaaa="aa-1-x">标记</span>
+        <span>123</span>
+        <div></div>
+        <p>是啊啊<br />456</p>
+        <div id="a">
+            <p><a href="#1">啊asdasd</a></p>
+            <p><a href="#1">啊</a></p>
+            <p><a href="#2">啊</a></p>
+            <p><a href="#2">啊</a></p>
+        </div>
+        <div id="b">
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+        </div>
+        <div id="c">
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+        </div>
+
+
+        <div id="d">
+            <div a="a1"><span>1</span><span>as</span></div>
+            <div a="a1"><span>2</span></div>
+            <div a="a1"><span>3</span></div>
+            <div a="a1"><span>4</span></div>
+            <p>aaa</p>
+        </div>
+
+        <div id="e">
+            <div a="aasd1"><span>是是</span><span>as</span></div>
+            <div a="qqwe"><span>方法</span></div>
+            <div a="asdqq"><span>去去</span></div>
+            <div a="asdqq"><span>我我</span></div>
+            <p>aaa</p>
+        </div>
+        <hr />
+        <div id="f">
+            <div a="aasd1"><span>是是</span><span>as</span></div>
+            <div a="aasd1"><span>是是</span><span>as</span></div>
+
+            <p></p>
+            <div a="qqwe"><span>方法</span></div>
+            <div a="asdqq"><span>去去</span></div>
+            <div a="asdqq"><span>我我</span></div>
+            <p>aaa</p>
+        </div>
+        <hr />
+        <div id="g">
+            <div a="aasd1"><span>是是</span><em>asd</em><span>as</span></div>
+            <div a="qqwe"><span>方法</span></div>
+            <div a="asdqq"><span>去去</span></div>
+            <div a="asdqq"><span>我我</span></div>
+            <p>aaa</p>
+        </div>
+</body>
+</html>
