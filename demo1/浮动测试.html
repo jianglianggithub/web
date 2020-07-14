@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .d1,.d2,.d3,.d4 {
+        width: 300px;
+        height: 300px;
+
+    }
+
+    .d1 {
+        float: left;
+        background: #e66465;
+    }
+    .d2 {
+        float: left;
+
+        background: aquamarine;
+    }
+    .d3 {
+        float: left;
+
+        background: #9198e5;
+    }
+
+    .d4 {
+
+
+        clear: both;
+        background: red;
+    }
+
+    .d4:after {
+        content: "<span>asd</span>";
+        display: block;
+        width: 100px;
+        height: 100px;
+        background: #0000FF;
+    }
+</style>
+<body>
+    <div class="d1">a</div>
+    <div class="d2">b</div>
+    <div class="d3">c</div>
+    <div class="d4">d</div>
+</body>
+</html>

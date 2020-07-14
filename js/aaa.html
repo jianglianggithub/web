@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+
+</body>
+
+<script>
+
+    window.onload = function () {
+        var bus = document.getElementsByTagName("button");
+
+        for(var i = 0;i < 3 ; i++) {
+            let x = JSON.stringify(i);
+            bus[i].onclick = function () {
+                alert(x);
+            }
+            // () 定义了一个 fun  () 代表执行这个fun 但是 要执行后换回一个fun 所以 fun 里面定义fun
+            // bus[i].onclick =   (function (x) {
+            //     return function () {
+            //         alert(x)
+            //     }
+            // })(i);
+        }
+
+    }
+
+
+</script>
+</html>

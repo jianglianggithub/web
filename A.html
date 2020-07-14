@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    window.onload  = function () {
+        class A {
+            constructor({x,y,z}) {
+                this.x= x;
+                this.y= y;
+                this.z= z;
+            }
+           main () {
+                alert(this.x)
+            }
+            aa(){
+                alert(this.y)
+            }
+        }
+
+        var a = new A();
+    }
+
+</script>
+</html>

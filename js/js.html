@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script
+    >
+
+
+
+
+
+
+    window.onload = function () {
+
+        function Person(name,x) {
+            this.name = name;
+            this.sex = x;
+            this.getName = function () {
+
+            }
+        }
+
+        // 其实这个就是给 new 出来的 对象添加成员方法而已。
+        Person.prototype.sum = function() {
+            return this.name;
+        }
+
+        // 会覆盖
+        Person.prototype = {
+            fun1 : function (x,y) {
+                alert(x+" "+y)
+            }
+        }
+
+         person1 = new Person();
+        // class Aaa {
+        //     aaa;
+        //     bbb;
+        //     constructor(a,b) {
+        //         this.aaa =  a;
+        //         this.bbb =  b;
+        //     }
+        //
+        //     sss(){
+        //         alert(this.aaa)
+        //     }
+        // }
+        // var aaa = new Aaa(1,2);
+        person1.name = "1";
+
+        person1.fun1(1,2)
+
+    }
+</script>
+</html>

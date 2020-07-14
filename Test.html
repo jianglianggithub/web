@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<body>
+    <div style="width: 100px;height: 100px; background: #0000FF;border-radius: 50%;position: absolute"></div>
+</body>
+
+
+<script>
+    var div = document.getElementsByTagName("div")[0];
+    var perX = 0;
+    var perY = 0;
+    div.onmousedown = function (ev) {
+        var clientX = ev.clientX;
+        var clientY = ev.clientY;
+
+
+        // 点击移动时
+        document.onmousemove = function (aa) {
+            var clientX_ = aa.clientX;
+            var clientY_ = aa.clientY;
+
+
+            div.style.left =clientX_-  clientX + perX + "px";
+            div.style.top =clientY_- clientY + perY + "px";
+
+
+
+        }
+
+        // 点击抬起后 清除事件。
+        document.onmouseup =function () {
+            var left = div.style.left+"";
+            var top = div.style.top+"";
+            if (left != "" && top != "") {
+
+                left = parseInt(left.substring(0,left.indexOf("px")))
+                top = parseInt(top.substring(0,top.indexOf("px")))
+                perX = left;
+                perY = top;
+            }
+            document.onmousemove = null;
+        }
+    }
+</script>
+</html>
